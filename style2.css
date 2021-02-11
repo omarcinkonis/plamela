@@ -1,0 +1,756 @@
+/* SRIFTAI */
+
+p {
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	font-family: "Roboto", sans-serif;
+}
+
+/* NAVIGACIJA */
+
+@media screen and (min-width: 992px) {
+	#hamburgeris {
+		display: none !important;
+	}
+
+	#paieska-mobile {
+		display: none !important;
+	}
+}
+
+#paieska-mobile {
+	/* paieškos laukelis mobile versijoje */
+	display: none; /* by default turi būti nerodomas, šį parametrą keičia puslapyje veikiančios JS funkcijos */
+	width: 50%;
+}
+
+#hamburgerio-tekstas {
+	/* lygiuoja mobile versijos tekstą pagal logotipo poziciją */
+	margin-right: 20.5333px; /* ikonų plotis minus hamburgerio ikonos plotis: 60px - 39.4667px = 20.5333px */
+	/* margin-left čia dėti negalima, nes tokiu atveju desktop versijoje susigadins lygiavimas
+	   !!! pridėjus prie ikonų margin/padding, būtina perskaičiuoti hamburgerio teksto margin-right reikšmę */
+}
+
+.navbar {
+	background-color: #fcfcfe;
+}
+
+.nav img {
+	padding: 0px 10px;
+	width: 47px;
+}
+
+.container1 {
+	background-color: #fcfcfe;
+	height: 90vh;
+}
+
+.container1 p {
+	padding: 15%;
+	padding-top: 0%;
+	width: 75%;
+	font-size: 26px;
+}
+
+.container1 img {
+	padding-top: 10%;
+	padding-left: 15%;
+}
+
+.container3 {
+	display: none;
+}
+
+.leftside,
+.rightside {
+	height: 100%;
+	width: 100%;
+}
+
+.no-gutters h1 {
+	font-size: 31px;
+	margin: 0% 10%;
+}
+
+@media screen and (max-width: 860px) {
+	.no-gutters h1 {
+		font-size: 21px;
+	}
+	.container1 {
+		height: 50vh;
+	}
+	.container1 p {
+		font-size: 18px;
+		text-align: center;
+		padding: auto;
+		width: 100%;
+	}
+	.container2 img {
+		width: 240px;
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.no-gutters h1 {
+		font-size: 18px;
+	}
+	.container1 {
+		height: 40vh;
+	}
+	.container1 p {
+		font-size: 18px;
+		text-align: center;
+		padding: auto;
+		width: 100%;
+	}
+	.container1 img {
+		display: block;
+		margin: 0 auto;
+		padding: 0px;
+	}
+	.container2 img {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.container3 {
+		display: block;
+		background-color: #f8f9fb;
+	}
+}
+
+#krepselis-menu {
+	width: 325px !important;
+}
+
+/*//////////////////////////////////////////////////////////////////////////// navbar. prisijungti, registruotis*/
+
+.navbar a,
+.navbar a:active {
+	color: #fec535;
+}
+.navbar a,
+.navbar a:hover {
+	color: #ebb332;
+}
+
+.navbar .action-form {
+	width: 280px;
+	padding: 20px;
+	left: auto;
+	right: 0;
+	font-size: 14px;
+}
+.navbar .action-form a {
+	color: #fec535;
+	padding: 0 !important;
+	font-size: 14px;
+}
+.navbar .action-form .hint-text {
+	text-align: center;
+	margin-bottom: 15px;
+	font-size: 13px;
+}
+.navbar .btn-primary,
+.navbar .btn-primary:active {
+	color: #fff;
+	background: #fec535 !important;
+	border: none;
+	border-radius: 28px;
+}
+.navbar .btn-primary:hover,
+.navbar .btn-primary:focus {
+	color: #fff;
+	background: #e7b12a !important;
+}
+
+/*//////////////////////////////////////////////////////////////////////////// mygtukai*/
+.myButton1 {
+	background-color: #fec535;
+	border-radius: 28px;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	color: white;
+	font-family: Arial;
+	font-size: 18px;
+	padding: 10px 21px;
+	text-decoration: none;
+}
+
+.myButton1:hover {
+	background-color: #ebb332;
+	text-decoration: none;
+	color: white;
+}
+
+.myButton1:active {
+	position: relative;
+	top: 1px;
+}
+
+@media screen and (max-width: 700px) {
+	.myButton1 {
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+}
+
+.receptas .myButton1 {
+	background-color: #fec535;
+	border-radius: 28px;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	color: white;
+	font-family: Arial;
+	font-size: 18px;
+	padding: 10px 21px;
+	text-decoration: none;
+}
+
+.receptas .myButton1:hover {
+	background-color: #ebb332;
+	text-decoration: none;
+	color: white;
+}
+
+.receptas .myButton1:active {
+	position: relative;
+	top: 1px;
+}
+
+@media screen and (max-width: 1000px) {
+	.receptas .myButton1 {
+		font-size: 13px;
+		padding: 10px 15px;
+	}
+}
+/*//////////////////////////////////////////////////////////////////////////// PARDUOTUVE*/
+
+.mini-cart {
+	float: right;
+}
+
+.mini-cart-button {
+	position: relative;
+	border-radius: 50px;
+}
+
+.mini-cart-container {
+	min-height: 200px;
+	position: absolute;
+	width: 50%;
+	max-width: 400px;
+	display: none;
+	background: white;
+	box-shadow: 0px 10px 50px -5px rgb(199, 199, 199);
+	top: 80px;
+	right: 10px;
+	z-index: 1;
+}
+
+.mini-cart-container ul {
+	margin-left: 0 !important;
+	padding-top: 20px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+.mini-cart-container ul li {
+	list-style: none;
+	position: relative;
+	border-bottom: 1px solid grey;
+	min-height: 60px;
+}
+
+.mini-cart-container ul li h3 {
+	font-size: 16px;
+}
+
+.mini-cart-container ul li h3 span {
+	font-size: 16px;
+	color: grey;
+	position: relative;
+}
+
+.mini-cart-container ul li span {
+	position: absolute;
+	right: 5px;
+	top: 10px;
+}
+
+.mini-cart-open {
+	display: block;
+}
+
+.dropdown {
+	display: inline-block;
+}
+
+.dropdown-menu {
+	margin-top: 23px !important;
+	width: 273px;
+	padding: 10px 10px 10px 10px !important;
+}
+
+#radio-buttons {
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+/*grid*/
+.product-grid {
+	padding-top: 20px;
+	display: grid;
+	justify-content: center;
+}
+
+.grid-item {
+	text-align: center;
+	padding: 15px;
+	transition: all 0.25s ease;
+	position: relative;
+}
+/*
+.grid-item:hover {
+  box-shadow: 0px 0px 20px -0.2px rgb(99, 99, 99);
+}
+*/
+.grid-item img {
+	width: 50%;
+}
+
+.grid-item h1 {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.grid-item h3 {
+	margin-top: 10px;
+}
+
+.grid-item .quantity-input {
+	margin: 5px auto;
+}
+
+.grid-item .quantity-input input {
+	max-width: 50px;
+}
+
+/*btn*/
+.add-to-cart-button {
+	display: inline;
+	background-color: #faa307;
+	border-radius: 28px;
+	border: 1px solid #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	color: white;
+	font-family: Arial;
+	font-size: 16px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.add-to-cart-button:hover {
+	background-color: #e6970a;
+	text-decoration: none;
+	color: white;
+}
+.add-to-cart-button:active {
+	position: relative;
+	top: 1px;
+}
+
+.input-text {
+	border: none;
+	background-color: #faa307;
+	width: 20px;
+}
+
+.plus,
+.minus {
+	background-color: #faa307;
+	border: none;
+	border-radius: 50px;
+	color: white;
+}
+
+.quantity {
+	position: absolute;
+}
+.quantity-input {
+	display: inline;
+	background-color: #faa307;
+	padding: 5px;
+	width: 30%;
+	border-radius: 28px;
+	color: white;
+}
+
+.mini-cart-totals {
+	text-align: center;
+}
+
+#total-price {
+	float: left;
+	padding: 5px;
+
+	min-width: 100px;
+	margin-left: 20px;
+	color: black;
+}
+
+#total-items {
+	float: right;
+	padding: 5px;
+
+	min-width: 100px;
+	margin-right: 20px;
+}
+
+#total-items p,
+#total-price p {
+	font-weight: 700;
+	color: black;
+	margin-bottom: 0;
+}
+
+#total-items span,
+#total-price span {
+	font-size: 14px;
+	font-weight: 700;
+	color: black;
+}
+
+.succes-message {
+	display: none;
+	position: absolute;
+	height: 100px;
+	background: white;
+	width: 200px;
+	z-index: 2;
+	left: 40%;
+	right: 0;
+	top: 30%;
+	font-size: 20px;
+	box-shadow: 0px 0px 20px -1px rgb(99, 99, 99);
+	text-align: center;
+	padding: 20px;
+}
+
+/*//////////////////////////////////////////////////////////////////////////// Receptai*/
+.row4 h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 21px;
+	padding-top: 5px;
+	margin-right: 3%;
+}
+.row4 {
+	padding: 0% 0%;
+	padding-left: 7%;
+	margin: 2% 5%;
+}
+
+.row4 p {
+	margin-right: 3%;
+}
+
+.receptai a {
+	text-decoration: none;
+	color: black;
+}
+
+.receptai a:hover {
+	text-decoration: none;
+	color: gray;
+	opacity: 90%;
+}
+
+/*//////////////////////////////////////////////////////////////////////////// Receptas*/
+
+.receptas {
+	padding-left: 5%;
+	padding-right: 10%;
+	padding-top: 5%;
+}
+.receptas h2 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 57px;
+}
+.receptas p {
+	text-align: justify;
+}
+
+.icons1 {
+	display: flex;
+}
+.icons {
+	margin: 10px;
+}
+.icons p {
+	text-align: center;
+	font-size: 12px;
+}
+
+.icons img {
+	width: 45px;
+}
+@media screen and (max-width: 1000px) {
+	.receptas h2 {
+		font-family: "Montserrat", sans-serif;
+		font-size: 38px;
+	}
+}
+
+/*.receptas .myButton{
+}
+*/
+
+@media screen and (max-width: 1000px) {
+	.receptas p {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.recbutton {
+		padding-left: 25%;
+	}
+}
+
+/*//////////////////////////////////////////////////////////////////////////// VALGIARASTIS*/
+.row4 {
+	padding-bottom: 5%;
+}
+.row4 h1 {
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+}
+
+.row4 h3 {
+	font-family: "Montserrat", sans-serif;
+	font-size: 18px;
+	padding-top: 5px;
+	margin-right: 3%;
+}
+
+/*//////////////////////////////////////////////////////////////////////////// FOOTER*/
+
+footer {
+	background-color: #fafafa;
+	width: 100%;
+	color: black;
+}
+
+.row2 {
+	padding: 5%;
+	padding-left: 18%;
+}
+
+.row .col-4 a {
+	text-decoration: none;
+	color: black;
+}
+
+.col-4 a :hover {
+	text-decoration: none;
+	color: gray;
+}
+
+@media screen and (max-width: 700px) {
+	.col-4 {
+		font-size: 12px;
+	}
+	.row2 {
+		padding-top: 5%;
+		padding-left: 5%;
+	}
+}
+
+/*ŠALDYTUVAS*/
+
+.noPad {
+	padding: 0 !important;
+}
+
+.noMrg {
+	margin: 0 !important;
+}
+
+/* LOADER (rodomas, kai kažkas kraunama) */
+.loader {
+	border: 16px solid rgb(219, 219, 219);
+	border-radius: 50%;
+	border-top: 16px solid rgb(220, 47, 2);
+	width: 120px;
+	height: 120px;
+	-webkit-animation: spin 2s linear infinite; /* Safari */
+	animation: spin 2s linear infinite;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -76px; /* plotis iš dviejų plius border */
+	margin-left: -76px;
+}
+
+.insideLoader {
+	width: 80px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px; /* plotis padalintas iš dviejų */
+	margin-left: -40px;
+}
+
+.underLoader {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.underLoaderBox {
+	transform: translateY(122px);
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+	0% {
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+h2 {
+	font-family: "Roboto", sans-serif;
+}
+
+/* - KIEKIS + (MYGTUKAI) */
+[data-quantity] {
+	position: relative; /* relative naudojamas, nes reikalingas z indeksas */
+	width: 100%;
+	max-width: 8rem; /* mygtuko plotis */
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+[data-quantity] legend {
+	display: none;
+}
+
+[data-quantity] input {
+	font-size: 16px;
+	height: 2rem;
+	padding: 0 2rem;
+	border-radius: 1rem;
+	border: 0;
+	background: #faa307; /* mygtuko spalva */
+	color: #fff; /* mygtuko teksto spalva */
+	box-shadow: 0 10px 65px -10px rgba(0, 0, 0, 0.25);
+	text-align: center;
+	width: 100%;
+	box-sizing: border-box;
+	font-weight: lighter;
+}
+
+[data-quantity] input:focus {
+	outline: none;
+	box-shadow: 0 5px 55px -10px rgba(0, 0, 0, 0.2), 0 0 4px #3fb0ff; /* Allows border radius on focus */
+}
+
+[data-quantity] input[type="number"]::-webkit-inner-spin-button,
+[data-quantity] input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+[data-quantity] input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+[data-quantity] button {
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+	top: 0.3rem;
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: #fff
+		url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><path d="M17 25h16M67 25h16M75 17v16" fill="none" stroke="rgb(59,69,66)" stroke-width="1.5px" stroke-linecap="round" stroke-linejoin="round" /></svg>')
+		no-repeat 0 0;
+	background-size: 2.8rem 1.4rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 100%;
+	border-radius: 0.7rem;
+	cursor: pointer;
+	transition: opacity 0.15s;
+	opacity: 0.5;
+}
+
+[data-quantity] button:active {
+	background-position-y: 1px;
+	box-shadow: inset 0 2px 12px -4px #c5d1d9;
+}
+
+[data-quantity] button:focus {
+	outline: none;
+}
+
+[data-quantity] button:hover {
+	opacity: 1;
+}
+
+[data-quantity] button.sub {
+	left: 0.3rem;
+}
+
+[data-quantity] button.add {
+	right: 0.3rem;
+	background-position-x: -1.4rem;
+}
+
+/* UŽSAKYMAS */
+
+#SUVESTINĖ table,
+th,
+td {
+	border: 1px solid black;
+}
+
+.btnUzsakymas{
+	background-color: #faa307 !important;
+	border: none !important;
+}
+
+.btnUzsakymas:active {
+	background-color: #fec535 !important;
+}
+.btnUzsakymas:hover {
+	background-color: #ebb332 !important;
+}
+
+.yellow {
+	color: #fec535 !important;
+}
